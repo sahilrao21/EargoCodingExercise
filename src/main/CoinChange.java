@@ -1,15 +1,28 @@
+package main;
+import test.TestCoinChange;
 import java.util.*;
-import org.junit.Test;
-import static org.junit.Assert.assertTrue;
 
-class CoinChange {
-    static int[] denominations = new int[]{1, 5, 10, 25};
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
+
+public class CoinChange {
+    public static int[] denominations = new int[]{1, 5, 10, 25};
+
     public static void main(String[] args) {
-        testCoinChange1();
+        JUnitCore junit = new JUnitCore();
+        Result result = junit.runClasses(TestCoinChange.class);
+
+        System.out.printf("%nSUMMARY:%n# of tests run: %d%n# of tests failed: %d%n",
+                result.getRunCount(), result.getFailureCount());
+
+        for (Failure failure : result.getFailures()) {
+            System.out.print("\n" + failure.toString());
+        }
     }
 
     // Assumes Assumes denomination array is sorted in ascending order and an answer exists
-    public static Map<Integer, Integer> calculateChange(int cents) {
+    public static Map<Integer, Integer> calculateChangeGreedy(int cents) {
         // Initializing coin change map to return
         Map<Integer, Integer> numCoinsMap = initializeCoinMap();
 
@@ -23,8 +36,6 @@ class CoinChange {
         int currDenom = denominations[denomIndex];
 
         while (cents > 0) {
-            System.out.println(cents / currDenom);
-            System.out.println(cents % currDenom);
             int numUsed = cents / currDenom;
             if (numUsed != 0) {
                 numCoinsMap.put(currDenom, numCoinsMap.get(currDenom) + numUsed);
@@ -82,20 +93,5 @@ class CoinChange {
         }
 
         return numCoinsMap;
-    }
-
-    @Test
-    public static void testCoinChange1() {
-        Map<Integer, Integer> correctMap = initializeCoinMap();
-
-        int cents = 10;
-        //correctMap.put();
-
-        Map<Integer, Integer> retMap = calculateChange(cents);
-        assertTrue(retMap.equals(correctMap));
-
-        for (int d : denominations) {
-            System.out.printf("%d, %d cent coin(s)%n", retMap.get(d), d);
-        }
     }
 }
