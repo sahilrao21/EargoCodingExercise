@@ -8,13 +8,15 @@
 1. Navigate to EargoCodingExercise/src
 2. Run: java main.CoinChange
 3. The code is already setup such that the main method will run all of my tests. There should be information printed about each test, as well as an overall performance summary.
-4. If you would like to add more test cases, navigate to test/TestCoinChange.java and copy the format of the tests I made.
+4. If you would like to view the code, navigate to main/CoinChange.java
+5. If you would like to add more test cases, navigate to test/TestCoinChange.java and copy the format of the tests I made.
 
 # Stock Simulation
 1. Navigate to EargoCodingExercise/src
 2. Run: java main.StockSimulation
 3. The code is already setup such that the main method will run all of my tests. There should be information printed about each test, as well as an overall performance summary.
-4. If you would like to add more test cases, navigate to test/TestStockSimulation.java and copy the format of the tests I made.
+4. If you would like to view the code, navigate to main/StockSimulation.java
+5. If you would like to add more test cases, navigate to test/TestStockSimulation.java and copy the format of the tests I made.
 
 # SQL Aggregation Question
 My SQL code can be found at: http://sqlfiddle.com/#!17/19053/6
