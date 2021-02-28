@@ -85,7 +85,7 @@ public class StockSimulation {
      * days i and (i + 1) where the stock price stays the same, the stock is not sold and re-bought.
      * While it would be ok to sell the stock on day i and re-buy it on day (i + 1), this does not
      * match the output format of the code. Therefore, make sure you follow this output format
-     * when testing the code or else it will fail.
+     * when testing or else it will fail.
      *
      * @param prices the price of the stock each day
      * @return list of two-element arrays. The first element in the array represents the
