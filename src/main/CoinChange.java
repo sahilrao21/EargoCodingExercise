@@ -10,9 +10,11 @@ public class CoinChange {
     public static int[] denominations = new int[]{1, 5, 10, 25};
 
     public static void main(String[] args) {
+        // Runs all JUnit tests in the TestCoinChange class
         JUnitCore junit = new JUnitCore();
         Result result = junit.runClasses(TestCoinChange.class);
 
+        // Prints statistics about the tests, as well as info about failed tests
         System.out.printf("%nSUMMARY:%n# of tests run: %d%n# of tests failed: %d%n",
                 result.getRunCount(), result.getFailureCount());
 
@@ -21,7 +23,17 @@ public class CoinChange {
         }
     }
 
-    // Assumes Assumes denomination array is sorted in ascending order and an answer exists
+    /**
+     * Calculates the number of each US coin needed for a provided number of cents. The
+     * function uses a greedy approach, which prioritizing always using the highest-valued
+     * coin available.  This function is not optimized for returning the minimum number of coins.
+     * This function assumes the denomination array is sorted in ascending order and that
+     * there exists a valid answer. However, in the case where cents < 1, an empty map
+     * is returned.
+     *
+     * @param cents amount of money for which we will generate the change
+     * @return map that indicates how many of each denomination was used to make up the change
+     */
     public static Map<Integer, Integer> calculateChangeGreedy(int cents) {
         // Initializing coin change map to return
         Map<Integer, Integer> numCoinsMap = initializeCoinMap();
@@ -47,7 +59,16 @@ public class CoinChange {
         return numCoinsMap;
     }
 
-    // assumes an answer exists
+    /**
+     * Calculates the number of each US coin needed for a provided number of cents. The
+     * function uses a dynamic programming approach to minimize the number of coins used
+     * to represent the change. This function is places less of a priority on higher-valued
+     * coins than the greedy function did. This function assumes there exists a valid answer.
+     * However, in the case where cents < 1, an empty map is returned.
+     *
+     * @param cents amount of money for which we will generate the change
+     * @return map that indicates how many of each denomination was used to make up the change
+     */
     public static Map<Integer, Integer> calculateMinChange(int cents) {
         // Initializing coin change map to return
         Map<Integer, Integer> numCoinsMap = initializeCoinMap();
