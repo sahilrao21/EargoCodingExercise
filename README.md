@@ -20,7 +20,7 @@
 My SQL code can be found at: http://sqlfiddle.com/#!17/19053/6
 
 # Extra
-Note: Anytime you make a change to the code, you will need to re-run the following lines:<br/>
+NOTE: Anytime you make a change to the code, you will need to re-run the following lines:<br/>
 javac -cp ../lib/junit-4.13.2.jar:../lib/hamcrest-2.2.jar:main/:test/ main/*.java test/*.java<br/>
 java main.CoinChange or java main.StockSimulation
 
