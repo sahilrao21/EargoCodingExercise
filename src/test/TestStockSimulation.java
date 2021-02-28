@@ -1,8 +1,7 @@
 package test;
-import main.CoinChange;
 import main.StockSimulation;
-import java.util.*;
 
+import java.util.*;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 

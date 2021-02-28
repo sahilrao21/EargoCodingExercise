@@ -1,7 +1,7 @@
 package test;
 import main.CoinChange;
-import java.util.*;
 
+import java.util.*;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 

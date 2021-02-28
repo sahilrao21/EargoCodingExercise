@@ -1,10 +1,11 @@
 package main;
-import java.util.*;
+import test.TestStockSimulation;
 
+import java.util.*;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
-import test.TestStockSimulation;
+
 
 public class StockSimulation {
     public static void main(String[] args) {
