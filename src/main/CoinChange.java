@@ -25,9 +25,9 @@ public class CoinChange {
 
     /**
      * Calculates the number of each US coin needed for a provided number of cents. The
-     * function uses a greedy approach, which prioritizing always using the highest-valued
-     * coin available.  This function is not optimized for returning the minimum number of coins.
-     * This function assumes the denomination array is sorted in ascending order and that
+     * function uses a greedy approach, which prioritizing using the highest-valued
+     * coin possible. This function is not optimized for returning the minimum number of coins.
+     * As well, it assumes the denomination array is sorted in ascending order and that
      * there exists a valid answer. However, in the case where cents < 1, an empty map
      * is returned.
      *
@@ -62,8 +62,8 @@ public class CoinChange {
     /**
      * Calculates the number of each US coin needed for a provided number of cents. The
      * function uses a dynamic programming approach to minimize the number of coins used
-     * to represent the change. This function is places less of a priority on higher-valued
-     * coins than the greedy function did. This function assumes there exists a valid answer.
+     * to represent the change. This version places less of a priority on higher-valued
+     * coins unlike the greedy version. This function assumes that an answer exists.
      * However, in the case where cents < 1, an empty map is returned.
      *
      * @param cents amount of money for which we will generate the change
