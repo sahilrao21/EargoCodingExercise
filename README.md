@@ -1,5 +1,5 @@
 # Setup
-1. Download JDK if you don't have it (JDK 8 here: forhttps://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+1. Download JDK if you don't have it (JDK 8 here: https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 2. Clone this repository
 4. Navigate to EargoCodingExercise/src
 5. Run the following code below: <br/>
