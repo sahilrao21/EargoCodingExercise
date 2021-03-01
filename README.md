@@ -2,8 +2,8 @@
 1. Download Java if you don't have it (https://java.com/en/)
 2. Clone this repository
 4. Navigate to EargoCodingExercise/src
-5. Run the following code below: <br>
-export CLASSPATH=${CLASSPATH}:../lib/junit-4.13.2.jar:../lib/hamcrest-2.2.jar
+5. Run the following code below: <br/>
+export CLASSPATH=${CLASSPATH}:../lib/junit-4.13.2.jar:../lib/hamcrest-2.2.jar <br/>
 javac main/\*.java test/\*.java  
 
 # Coin Change
