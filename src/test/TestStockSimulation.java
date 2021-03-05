@@ -77,6 +77,16 @@ public class TestStockSimulation {
     }
 
     @Test
+    public void testMaximizeOneTrade8() {
+        double[] prices = new double[]{3, 8, 8, 56, 38, 2, 7, 42, 54, 53};
+        int[] correctDayPairs = new int[]{0, 3};
+
+        int[] retDayPairs = StockSimulation.maximizeOneTrade(prices);
+        assertTrue(Arrays.equals(correctDayPairs, retDayPairs));
+        printTransactionInfo(prices, Arrays.asList(retDayPairs), false);
+    }
+
+    @Test
     public void testMaximizeMultipleTrades1() {
         double[] prices = new double[0];
         List<int[]> correctDayPairs = new ArrayList<>();
